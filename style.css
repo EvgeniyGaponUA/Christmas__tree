@@ -1,0 +1,100 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.christmas-tree {
+    height: 100vh;
+    font-size: 62.5%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.christmas-tree__box {
+    width: 450px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.box__title {
+    margin-bottom: 15px;
+    font-size: 30px;
+    text-transform: uppercase;
+    color:#2b0cdd;
+}
+
+.box__title span {
+    font-size: 40px;
+    font-weight: 700;
+    color:#fc440c;
+}
+
+.box__text {
+    margin-bottom: 15px;
+    font-size: 30px;
+}
+
+
+.christmas-tree__pick {
+    width: 500px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #157c0c;
+}
+
+
+.leaf-tree, .ball-tree, .base-tree {
+    display: inline-block;
+    width: 1rem;
+    height: 1rem;
+    background-color: #157c0c;
+}
+
+.leaf-tree {
+    clip-path: polygon(0% 15%, 28% 34%, 15% 0%, 85% 0%, 71% 34%, 100% 15%, 100% 85%, 74% 68%, 85% 100%, 15% 100%, 26% 68%, 0% 85%);
+}
+
+.ball-tree {
+    border-radius: 50%;
+    border:1px solid #000;
+    background-color: #fc440c;
+    animation-name: blinker;
+    animation-iteration-count: infinite;
+    animation-timing-function: cubic-bezier(1.0,0,0,1.0);
+    animation-duration: 2s;
+}
+
+
+@keyframes blinker {
+    0% { background-color: #fc440c; }
+    50% { background-color: #e4fc0c; }
+    100% { background-color: #2b0cdd }
+}
+
+.base-tree {
+    width: 20px;
+    height: 10px;
+    background-color: #614c08;
+}
+
+.star-tree {
+    width: 3rem;
+    height: 3rem;
+    background-color: #edfd05;
+    clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+    animation-name: starTree;
+    animation-iteration-count: infinite;
+    animation-timing-function: cubic-bezier(1.0,0,0,1.0);
+    animation-duration: 2s;
+}
+
+@keyframes starTree {
+    0% { background-color: #edfd05; }
+    50% { background-color: #daec34 }
+    100% { background-color: #edfd05; }
+}
